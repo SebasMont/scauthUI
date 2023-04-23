@@ -7,6 +7,32 @@ from frames import nav_bar
 from frames import not_found
 from frames import user_data
 
+"""
+class Json:
+
+    def __init__(
+        self,
+        username,
+        role,
+        account_number,
+        institute,
+        career
+    ):
+        self.username = username
+        self.role = role
+        self.account_number = account_number
+        self.institute = institute
+        self.career = career
+
+request = Json(
+    "Rey Sebastian Monter Fragoso",
+    "Estudiante",
+    419115,
+    "Instituto de Ciencias Básicas e Ingeniería",
+    'Lic. en Ingeniería en Electrónica'
+)
+"""
+
 # Main App class
 class App(ctk.CTk):
     def __init__(self):
@@ -46,7 +72,8 @@ class App(ctk.CTk):
             master=self,
             width=780,
             corner_radius=20,
-            fg_color = col_set.blue_grey
+            fg_color = col_set.blue_grey,
+            #user=request
         )
         
         #Navigation Bar call

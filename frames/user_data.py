@@ -4,7 +4,7 @@ import config
 from PIL import Image
 
 class UserDataFrame(ctk.CTkFrame):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, user, **kwargs):
         super().__init__(*args, **kwargs)
 
         self.grid_columnconfigure(
@@ -18,7 +18,7 @@ class UserDataFrame(ctk.CTkFrame):
 
         self.role = ctk.CTkLabel(
             self,
-            text='Estudiante',
+            text=user.role,
             font=ctk.CTkFont(
                 family=config.font_family,
                 size=config.h3_title,
@@ -26,7 +26,7 @@ class UserDataFrame(ctk.CTkFrame):
                 ),
             text_color=config.pearl,
             fg_color=config.success,
-            corner_radius=20,
+            corner_radius=25,
             anchor='center',
             justify='center'
         )
@@ -62,7 +62,7 @@ class UserDataFrame(ctk.CTkFrame):
 
         self.name = ctk.CTkLabel(
             self,
-            text='Rey Sebastian Monter Fragoso',
+            text=user.username,
             font=ctk.CTkFont(
                 family=config.font_family,
                 size=config.p_text,
@@ -82,7 +82,7 @@ class UserDataFrame(ctk.CTkFrame):
 
         self.account_number = ctk.CTkLabel(
             self,
-            text='419115',
+            text=user.account_number,
             font=ctk.CTkFont(
                 family=config.font_family,
                 size=config.p_text,
@@ -102,7 +102,7 @@ class UserDataFrame(ctk.CTkFrame):
 
         self.institute = ctk.CTkLabel(
             self,
-            text='Instituto de Ciencias Básicas e Ingeniería',
+            text=user.institute,
             font=ctk.CTkFont(
                 family=config.font_family,
                 size=config.p_text,
